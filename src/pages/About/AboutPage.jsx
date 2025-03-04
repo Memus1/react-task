@@ -34,6 +34,10 @@ function AboutPage() {
       setProductKg("");
     }
    };
+   const deleteProduct=(index, cost)=>{
+    setMahsulotlar(mahsulotlar.filter((_, i)=> i !== index))
+    setMiqdor((prev)=> (isNaN(prev) ? 0 : Number(prev) + cost))
+   }
  
 
   
@@ -91,6 +95,9 @@ function AboutPage() {
             <h3>Narxi: {mahsulot.price} so'm</h3> 
             <h3>Kg: {mahsulot.kg}</h3> 
             <p>Jami: {mahsulot.price * mahsulot.kg} so'm</p> 
+            <button  onClick={() => deleteProduct(index, mahsulot.price * mahsulot.kg)}>
+              <FaTrash/>
+            </button>
             </div>
         ))}
       </div>
