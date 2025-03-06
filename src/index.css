@@ -1,0 +1,36 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+.banner{
+    background-image: url("./assets/images/IMAGE.png");
+    height: 698px;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.inp{
+    width: 150px;
+    height: 45px;
+    background-color: beige;
+    border: 2px solid gray;
+    margin: 8px;
+}
+.btn{
+    min-width: 65px;
+    min-height: 40px;
+    background-color: gray;
+    margin: 10px;
+}
+.product-list{
+    background-color: gray;
+    color: white;
+    min-height: 150px;
+    width: 200px;
+    margin: 5px;
+    padding: 10px;
+}
